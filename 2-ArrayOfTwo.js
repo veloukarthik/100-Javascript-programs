@@ -2,11 +2,19 @@ function ArrayOfTwo(nums, total) {
     let numlen = nums.length;
     let nums2 = [];
     for (let i = 0; i < numlen; i++) {
-        for (let j = i + 1; j < numlen; j++) {
-            let sum = nums[i] + nums[j];
-            if (sum === total) {
-                nums2.push([nums[i], nums[j]]);
+        for (let j = 0; j < numlen; j++) {
+            if(nums[i] != nums[j])
+            {
+                let sum = nums[i] + nums[j];
+                if (sum === total) {
+                    if(nums2.includes(nums[i],nums[j]))
+                    {
+                        return;
+                    }
+                    nums2.push([nums[i], nums[j]]);
+                }
             }
+           
         }
     }
     console.log("nums", nums2);
