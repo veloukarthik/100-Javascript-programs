@@ -14,7 +14,7 @@ function starsPattern(num) {
 
 starsPattern(5);
 
-//solution 2 inverse stars
+//solution 2 pyramid
 function inverseStars(num) {
     // First Half: Increasing pattern
     for (let i = 1; i <= num; i++) {
