@@ -13,5 +13,5 @@ function ArrayMissing(nums) {
     console.log("Missing number:", missing);
 }
 
-let nums = [11, 12, 13, 15, 14, 16];
+let nums = [1,2,3,4,5,7,6,9,10];
 ArrayMissing(nums);
