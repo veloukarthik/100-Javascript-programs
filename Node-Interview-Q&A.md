@@ -51,3 +51,45 @@ next iteration of the event loop.
 11.Differences between spawn() and fork()?
 - spawn is used to create a new process
 - fork is used to create a new process that is a child of the current process.
+- spawn is used to create a new process that is not a child of the current process.
+
+12. What is event bubbling?
+- Event bubbling is the concept where an event starts from the deepest element (the target) and propagates upwards through its ancestors in the 
+DOM tree until it reaches the root.
+<code>
+<!-- html code -->
+<div id="parent" style="padding: 20px; background-color: lightblue;">
+  Parent
+  <div id="child" style="padding: 20px; background-color: lightgreen;">
+    Child
+  </div>
+</div>
+<!-- Scriptcode -->
+document.getElementById("parent").addEventListener("click", () => {
+  console.log("Parent clicked");
+});
+
+document.getElementById("child").addEventListener("click", () => {
+  console.log("Child clicked");
+});
+
+</code>
+
+13. what is event delegation?
+- Event delegation is a technique where you attach a single event listener to a parent element to handle events for its child elements. 
+- It leverages event bubbling to capture events triggered by child elements.
+<code>
+<!-- html code -->
+<ul id="list" style="padding: 10px; background-color: lightgray;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+<!-- scriptcode -->
+document.getElementById("list").addEventListener("click", (event) => {
+  if (event.target.tagName === "LI") {
+    console.log(`You clicked on ${event.target.textContent}`);
+  }
+});
+
+</code>
