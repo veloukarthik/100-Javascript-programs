@@ -57,6 +57,7 @@ next iteration of the event loop.
 - Event bubbling is the concept where an event starts from the deepest element (the target) and propagates upwards through its ancestors in the 
 DOM tree until it reaches the root.
 <code>
+<pre>
 <!-- html code -->
 <div id="parent" style="padding: 20px; background-color: lightblue;">
   Parent
@@ -72,7 +73,7 @@ document.getElementById("parent").addEventListener("click", () => {
 document.getElementById("child").addEventListener("click", () => {
   console.log("Child clicked");
 });
-
+</pre>
 </code>
 
 13. what is event delegation?
@@ -80,6 +81,7 @@ document.getElementById("child").addEventListener("click", () => {
 - It leverages event bubbling to capture events triggered by child elements.
 <code>
 <!-- html code -->
+<pre>
 <ul id="list" style="padding: 10px; background-color: lightgray;">
   <li>Item 1</li>
   <li>Item 2</li>
@@ -91,5 +93,5 @@ document.getElementById("list").addEventListener("click", (event) => {
     console.log(`You clicked on ${event.target.textContent}`);
   }
 });
-
+</pre>
 </code>
