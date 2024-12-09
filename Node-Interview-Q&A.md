@@ -76,7 +76,7 @@ document.getElementById("child").addEventListener("click", () => {
 </pre>
 </code>
 
-13. what is event delegation?
+13. What is event delegation?
 - Event delegation is a technique where you attach a single event listener to a parent element to handle events for its child elements. 
 - It leverages event bubbling to capture events triggered by child elements.
 <code>
@@ -95,3 +95,28 @@ document.getElementById("list").addEventListener("click", (event) => {
 });
 </pre>
 </code>
+
+14. What is prototype?
+- Every javascript object has a prototype, which is also an object.
+- A prototype object acts as a blueprint from which other objects inherit properties and methods. 
+- The prototype property is fundamental to JavaScript’s inheritance model.
+
+15. What is this keyword in JavaScript?
+- In Javascript this keyword refers to global scope.
+- In a function this keyword refers to the global object.
+- In an event, this keyword refers to the element that received the event.
+- In a method, this keyword refers to the method that is called.
+
+16. what is difference between apply, call and bind?
+- In JavaScript, the call, apply, and bind methods are used to control the invocation of the method.
+- The call method is invokes a function with a given this value and arguments provided one by one.
+- The apply method is invokes a function with a given this value and arguments provided as an array.
+- In bind method, Returns a new function with a given this value and preset arguments, but doesn’t invoke it immediately.
+
+17. Define generator function?
+- Generator functions allow you to define an iterative algorithm by writing a function that can pause execution (yield) and resume later. 
+- They are declared using the function* syntax and produce values one at a time.
+
+18. what is currying function?
+- Currying is a technique of transforming a function that takes multiple arguments into a series of functions, each taking one argument at a time. 
+- For example, a function f(a, b) can be converted to f(a)(b)
