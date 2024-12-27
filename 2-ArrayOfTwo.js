@@ -2,7 +2,7 @@ function ArrayOfTwo(nums, total) {
     let numlen = nums.length;
     let nums2 = [];
     for (let i = 0; i < numlen; i++) {
-        for (let j = 0; j < numlen; j++) {
+        for (let j = 0; j < i; j++) {
             if(nums[i] != nums[j])
             {
                 let sum = nums[i] + nums[j];
